@@ -8,10 +8,11 @@ def display_menu
   puts "[5] Trie la liste de handle par ordre alphabétique."
   puts "[6] Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)"
   puts "[7] Quelle est la position dans l'array de la personne @epenser ?"
-  puts ["[8] Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"]
+  puts "[8] Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
+  puts "[9] Pour s'excit"
   while true
     choice = gets.chomp.to_i
-    if choice <= 8 && choice > 0
+    if choice <= 9 && choice > 0
       return choice
     end
     puts "Nop! Try again"
@@ -37,9 +38,12 @@ def handle_menu(choice)
     handle_epenser(handles)
   when 8
     handle_repartition(handles)
+  when 9
+    return false
   else
     puts "Errooooor"
   end
+  return true
 end
 
 def handle_nb(handles)
@@ -100,6 +104,8 @@ def handle_repartition(handles)
   end
 end
 
-handle_menu(display_menu)
+while handle_menu(display_menu)
+  puts "NEW PARTY"
+end
     
 
