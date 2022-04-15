@@ -84,6 +84,7 @@ def expansivest(cours)
   cours.each do |key, value|
     if value.to_f < 6000 && value.to_f > price
       crypto = key
+      price = value.to_f
     end
   end
   puts "La plus cheros dans les moins de six mille est #{crypto}"
