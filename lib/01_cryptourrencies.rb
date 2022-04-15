@@ -59,7 +59,7 @@ def cours_smaller(cours)
   smaller_crypto = []
   cours.each do |key, value|
     if value.to_f < smaller_value
-      smaller_value = value.to_i
+      smaller_value = value.to_f
       smaller_crypto = [key]
     elsif value.to_f == smaller_value
       smaller_crypto.push(key)

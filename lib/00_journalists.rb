@@ -100,7 +100,7 @@ def handle_repartition(handles)
   end
   puts "Voici la répartition : "
   repartition.sort.each do |key, value|
-    puts "Il y'a #{value} handle avec #{key-1} caractère"
+    puts "Il y'a #{value} handle avec #{key+1} caractère"
   end
 end
 
